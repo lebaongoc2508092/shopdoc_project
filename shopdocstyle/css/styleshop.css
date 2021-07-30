@@ -5,7 +5,7 @@
 }
 /* css chung */
 html{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 .text-center{
     text-align: center !important;
@@ -17,6 +17,15 @@ html{
 .col-footer {
     width: 370px;
     padding: 0 16px;
+}
+.col-bottom {
+    flex: 33.3333%;
+  max-width:33.3333% ;
+}
+.col-qv {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding:0 2px;
 }
 /* css header */
 #main{
@@ -162,7 +171,7 @@ list-style-type: none;
     text-transform: uppercase;
     font-size:2.643rem;
     color: #050505;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     line-height: 1.2;
     font-weight: 500;
 }
@@ -174,8 +183,8 @@ list-style-type: none;
 .new-products-content-item {
     width: 255px;
     text-align: center;
-    padding: 10px 0;
     border-bottom: 1px solid #cccc;
+    padding: 20px 0;
 }
 
 .new-products-content-item h3:hover {
@@ -185,7 +194,7 @@ list-style-type: none;
 
 .new-products-content-item h3 {
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     margin-top: 6px;
     color: #050505;
 }
@@ -195,9 +204,31 @@ list-style-type: none;
 }
 .new-products-content-item p {
     color: red;
-    font-family: Quicksand_bold;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 900;
 }
+.new-products-content-item:hover  .qv {
+    display: block;
+}
+.qv {
+   margin-top: 10px;
+   display: none;
+}
+.qv a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.buy-view {
+    border: 1px solid #000;
+    background-color: #000;
+    margin: 0 3px;
+    display: inline-block;
+    padding: 10px 12px;
+}
+
+
 /* tin tức */
 .new-products-content-tintuc {
     width: 379px;
@@ -221,7 +252,7 @@ list-style-type: none;
     transition: all ease 0.3s;
     background-color: transparent;
     font-size: 1.514rem;
-    font-family: Quicksand_bold;
+    font-family: 'Quicksand', sans-serif;
     line-height: 1.4;
     text-align: left;
     padding: 6px 6px;
@@ -229,7 +260,7 @@ list-style-type: none;
 .new-products-content-tintuc p {
     font-size: 16px;
     color: #050505;
-    font-family: Quicksand_regular;
+    font-family: 'Quicksand', sans-serif;
     letter-spacing: 1px;
     font-weight: 400;
     line-height: 1.5;
@@ -243,7 +274,7 @@ list-style-type: none;
     background-color: transparent;
     cursor: pointer;
     font-size: 14px;
-    font-family: Quicksand_regular;
+    font-family: 'Quicksand', sans-serif;
     letter-spacing: 1px;
     font-weight: 500;
 }
@@ -254,8 +285,9 @@ list-style-type: none;
     background-image: url(https://scontent.fpnh22-2.fna.fbcdn.net/v/t1.18169-9/24796719_917573488397925_7972656416309962776_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=e3f864&_nc_ohc=gLAB2ujmsqsAX-Xueb3&_nc_ht=scontent.fpnh22-2.fna&oh=5515d34003494031f22bc7118a0c5be8&oe=6124668B);
     background-repeat: no-repeat;
     background-size: 100%;
-    margin-top: 240px;
+    margin-top: 280px;
     position: relative;
+    background-attachment: fixed;
 }
 .text-store a {
    color: #fff;
@@ -265,7 +297,7 @@ list-style-type: none;
     display: block;
     top: 50%;
     right: 33.3333%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 /* footer subscribe  */
 .section-footer {
@@ -348,6 +380,247 @@ h4.footer-title {
      margin: 15px 0 0 -7px;
     
 }
+/*............................ product......................... */
+/* product top  */
+.product{
+    padding: 150px 0;
+}
+.product-top {
+    margin-bottom: 30px;
+}
+.product-top p {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0 12px;
+    font-size: 12px;
+}
+.product-content-left {
+    width: 60%;
+}
+
+
+.product-content-left-big-img {
+    width: 90%;
+    padding-left: 20px;
+}
+.product-content-left-small-img {
+    width: 10%;
+}
+.product-content-left-big-img img {
+    width: 100%;
+}
+.product-content-left-small-img img {
+    width: 100%;
+}
+/* product ringt  */
+.product-content-right {
+    width: 40%;
+    padding-left: 20px;
+}
+.product-content-right-product-name h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px; 
+}
+.product-content-right-product-name span {
+    color: #ccc;
+    font-size: 12px;
+}
+.product-content-right-product-price {
+    margin: 12px 0;
+    font-size: 20px;
+    font-weight: bold;  
+    font-family: 'Quicksand', sans-serif;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.product-content-right-product-color p {
+    font-family:'Quicksand', sans-serif; 
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-content-right-product-color img {
+    width: 30px;
+    height: 30px;
+    padding: 6px 6px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.product-content-right-product-color-img  {
+    width:100%;
+    height: 30px;
+    display: flex;
+}
+
+.roduct-content-right-product-size {
+    margin-top: 100px;
+}
+.size span:hover {
+    border: 1px solid #050505;
+    transition: 0.3s;
+}
+
+.size span {
+    display: inline-block;
+    background: #fff;
+    min-width: 40px;
+    height: 40px;
+    margin: 5px 1% 5px 0;
+    line-height: 40px;
+    position: relative;
+    border: 1px solid #e5e5e5;
+    font-size: 12px;
+    color: #252a2b;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 4px;
+}
+.hd-chonsize a:hover,
+.product-content-right-product-button button:hover {
+    color: #fcd203;
+    background: 0 0;
+}
+.hd-chonsize {
+   width: 100%;
+}
+.hd-chonsize a {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: none;
+    padding: 10px 15px;
+    line-height: 22px;
+    width: 60%;
+    float: left;
+    margin-right: 2%;
+    cursor: pointer;
+    position: relative;
+    color: #000;
+    border: 1px solid #fcd203;
+   text-decoration: none;
+   background-color: #fcd203;
+   text-align: center;
+    display: block;
+    transition: all 0.5s ease;
+}
+.quantity {
+    margin-top: 60px;
+    display: flex;
+}
+.quantity > p {
+    padding-right: 6px;
+}
+.quantity input{
+    width: 50px;
+    padding-right: 6px;
+}
+.product-content-right-product-button {
+    margin-top: 12px;
+}
+.product-content-right-product-button button {
+    border: 1px solid #fcd203;
+    border-radius: 0;
+    text-align: center;
+    letter-spacing: 1px;
+    z-index: 1;
+    color: #fff;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: none;
+    padding: 7px 15px;
+    line-height: 22px;
+    width: 40%;
+    margin-right: 2%;
+    cursor: pointer;
+    background-color:#fcd203;
+    transition: all 0.5s ease;
+    ;
+}
+.description-content {
+    margin: 12px 0;
+}
+.description-content p {
+    line-height: 2.1!important;
+    margin-bottom: 10px!important;
+    letter-spacing: 0!important;
+    font-size: 1rem!important;
+}
+/* product bottom  */
+.product-bottom {
+    margin-top: 40px;
+    margin-bottom: -80px;
+}
+ .policy-item {
+     margin-top: 12px;
+     border-top: 1px solid #ccc ;
+     padding: 12px 6px;
+     line-height: 2.1 !important;
+     font-family:'Quicksand', sans-serif; 
+ }
+ .policy-item h4 {
+     font-size: 16px;
+     font-weight: 500;
+     text-transform: uppercase;
+ }
+ /* below info  */
+ .info-below-product {
+     margin-top: 20px;
+     width: 100%;
+     
+ }
+ .banner-info-product {
+     max-width: 30%;
+     padding: 20px;
+     display: flex;
+     border: 1px solid #000;
+     margin: 0 25px;
+ }
+.img-info {
+    width: 80px;
+    height: 50px;
+    padding: 0 12px;
+}
+.img-info img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-info p {
+font-size: 16px;
+font-weight: 800;
+}
+/* san pham cung danh muc  */
+.suggest-products  {
+    margin-top: 20px;
+}
+.suggest-products h2 {
+    font-family: 'Quicksand', sans-serif;
+    margin: 20px 0;
+    color: #050505;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: 300;
+    padding-top: 12px;
+    font-size: 30px;
+}
+.new-products-content-item {
+    width: 100%;
+}
+.new-products-content-item  {
+   width: 300px;
+   padding: 0 12px;
+}
+.new-products-content-item img {
+    max-width: 100%;
+}
+
+
+
+
 
 
 

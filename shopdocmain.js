@@ -22,3 +22,12 @@ function slider (index){
     dotItem[index].classList.add('active')
 }
 setInterval(imgSlider,3000)
+//........................product....................
+const bigImg = document.querySelector(".product-content-left-big-img img")
+const smallImg = document.querySelectorAll(".product-content-left-small-img img")
+smallImg.forEach(function(imgItem,x){
+    imgItem.addEventListener("click",function(){
+    bigImg.src = imgItem.src
+})
+})
+
