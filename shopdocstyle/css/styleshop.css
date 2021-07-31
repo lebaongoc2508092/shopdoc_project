@@ -57,6 +57,7 @@ html{
 }
 .logo-header{
     width: 122px;
+    cursor: pointer;
 }
 
 .logo {
