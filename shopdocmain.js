@@ -93,3 +93,235 @@ function updatecart() {
       updatecart()
     })
   }
+// đổ sản phẩm từ cơ sở dữ liệu 
+const listProducts = [
+  {
+    id: 1,
+    nameProduct: "AP1010 Áo Phông 28/621",
+    imgProduct:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210705/Screenshot_21_thumb.png",
+    price: 285000,
+  },
+  {
+    id: 2,
+    nameProduct: "AP6835 Áo Phông 28/621",
+    imgProduct:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210706/BUM07485_min_thumb.jpg",
+    price: 265000,
+  },
+  {
+    id: 3,
+    nameProduct:
+      "AP6816 Áo Phông 28/621",
+    imgProduct:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210705/BUM07449_thumb.jpg",
+    price: 265000,
+  },
+  {
+    id: 4,
+    nameProduct: "AP6839 Áo Phông 28/621",
+    imgProduct:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210706/BUM07490_min_thumb.jpg",
+    price: 265000,
+  },
+  {
+    id: 5,
+    nameProduct:
+      "AP138 Áo Phông 25/621",
+    imgProduct:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210705/BUM07481_min_thumb.jpg  ",
+    price: 285000,
+  },
+  {
+    id: 6,
+    nameProduct:
+      "AP337 Áo Phông 25/621",
+    imgProduct:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210705/Screenshot_16_thumb.png",
+    price:285000,
+  },
+  {id: 7,
+  nameProduct:
+    "APL2109 Áo Polo Basic Regular 18/621",
+  imgProduct:
+    "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210705/BUM07498_thumb.jpg",
+  price:269000,
+},
+{id: 8,
+nameProduct:
+  "APL2106 Áo Polo Basic Regular 18/621",
+imgProduct:
+  "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210705/BUM07501_thumb.jpg",
+price:269000,
+},
+{id: 9,
+nameProduct:
+  "Áo Thun Tay Ngắn AP2091",
+imgProduct:
+  "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210424/bum05846_thumb.jpg",
+price:265000,
+},
+{id: 10,
+nameProduct:
+  "Áo Thun Tay Ngắn AP2095",
+imgProduct:
+  "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210424/bum05845_thumb.jpg",
+price:265000,
+},
+];
+
+
+localStorage.setItem('listProducts',JSON.stringify(listProducts));
+let data = JSON.parse(localStorage.getItem("listProducts"));
+function start() {
+  renderHTML(data);
+}
+function renderHTML(arr) {
+  let lst = document.querySelector(".new-products-content");
+  let strHTML = arr.map((item) =>{
+    return`<div class="new-products-content-item">
+    <div onclick="changeProducts(${item.id})">
+    <a href="../shopdocproject/products.html"><img src="${item.imgProduct}" alt="AP1010 Áo Phông 28/621"></a>
+    <h3 class="title">${item.nameProduct}</h3>
+    <p class="price">${item.price}<sup>đ</sup></p></div>
+    <div class="qv row">
+        <div class="buy-view">
+        <a href="" class="buy  ">
+            <i class="buy-btn ti-shopping-cart"></i>Mua nhanh
+        </a>
+    </div>
+    <div class="buy-view">
+        <a href="" class="view ">
+            <i class="view-btn ti-eye"></i>Xem chi tiết
+        </a>
+    </div>
+    </div>
+</div>`
+  });if (lst) {
+    lst.innerHTML = strHTML.join(" ");
+  }
+}
+
+start();
+let idProduct;
+function changeProducts(id) {
+  localStorage.setItem("id", id);
+  localStorage.removeItem('listBestSale')
+  window.location.href = "./products.html";
+}
+// cơ sở dữ liệu sản phẩm bán chạy
+const listBestSale = [
+  {
+    id: 11,
+    name: "AP3312 áo phông 12/621",
+    img:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210630/BUM06010_thumb.jpg",
+    price: 265000,
+  },
+  {
+    id: 12,
+    name: "AP4072 áo phông 12/621",
+    img:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210630/BUM06006_thumb.jpg",
+    price: 265000,
+  },
+  {
+    id: 13,
+    name:
+      "TT1111 áo tanktop 11/621",
+    img:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210630/BUM06005_thumb.jpg",
+    price: 225000,
+  },
+  {
+    id: 14,
+    name: "TT1113 áo tanktop 11/621",
+    img:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210630/BUM06007_thumb.jpg",
+    price: 225000,
+  },
+  {
+    id: 15,
+    name:
+      "AP4075 áo phông 9/621",
+    img:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210630/BUM06011_thumb.jpg",
+    price: 265000,
+  },
+  {
+    id: 16,
+    name:
+      "TT1110 áo tanktop 9/621",
+    img:
+      "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210630/BUM06009_thumb.jpg",
+    price:225000,
+  },
+  {id: 17,
+  name:
+    "TT1114 tanktop 29/521",
+  img:
+    "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210630/BUM06004_thumb.jpg",
+  price:215000,
+},
+{id: 18,
+name:
+  "TT1107 tanktop 22/521",
+img:
+  "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210630/BUM06002_thumb.jpg",
+price:215000,
+},
+{id: 19,
+name:
+  "TT1112 áo tanktop 25/521",
+img:
+  "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210630/BUM06003_thumb.jpg",
+price:215000,
+},
+{id: 20,
+name:
+  "AP2096 ÁO PHÔNG SLIM FIT 26/521",
+img:
+  "https://storage.googleapis.com/cdn.nhanh.vn/store/8901/ps/20210630/BUM06001_thumb.jpg",
+price:265000,
+},
+];
+localStorage.setItem('listBestSale',JSON.stringify(listBestSale));
+let bestSale = JSON.parse(localStorage.getItem('listBestSale'));
+console.log(bestSale)
+function startbestSale(){
+  renderHTML2(bestSale)
+}
+function renderHTML2(arr){
+  let lstbestSale = document.querySelector('#best-sale');
+  let strHTML2 = arr.map((item) => {
+    return`<div class="new-products-content-item new-products-best-sale">
+    <div onclick="bestProduct(${item.id})">
+    <img src="${item.img}" alt="AP3312 áo phông 12/621">
+    <h3>${item.name}</h3>
+    <p>${item.price}<sup>đ</sup></p>
+    </div>
+<div class="qv row">
+    <div class="buy-view">
+    <a href="" class="buy  ">
+        <i class="buy-btn ti-shopping-cart"></i>Mua nhanh
+    </a>
+</div>
+<div class="buy-view">
+    <a href="" class="view ">
+        <i class="view-btn ti-eye"></i>Xem chi tiết
+    </a>
+</div>
+</div>
+</div>`
+}); if(lstbestSale){
+  lstbestSale.innerHTML += strHTML2.join(" ")
+}
+}
+startbestSale();
+
+let idProduct2;
+function bestProduct(id) {
+  localStorage.setItem("id2", id);
+  localStorage.removeItem('listProducts')
+  window.location.href = "./products.html";
+}

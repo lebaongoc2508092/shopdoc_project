@@ -89,23 +89,31 @@ list-style-type: none;
     color:#f56200; 
     background: #fff;
 }
+#nav .subnav li:first-child  {
+    border-top: 2px solid #000;
+}
 #nav .subnav {
     display: none;
-    position: absolute;
-    min-width: 160px;
+    position: absolute; 
     left: 16px;
     right: 4px;
+  
     
 }
 #nav .subnav a{
     font-size: 14px;
     font-weight: 500;
-    padding: 5px 0px;
+    padding: 5px 5px;
     width: 100%;
+    display: block;
+    min-width: 160px;
+    border-bottom: 1px solid #ddd;
+    background-color:#fff;
+    
 }
 .icon-btn {
     padding: 9px 9px;
-    width: 10%;
+    width: 15%;
     cursor: pointer;
 }
 
@@ -198,6 +206,7 @@ list-style-type: none;
     font-family: 'Quicksand', sans-serif;
     margin-top: 6px;
     color: #050505;
+    padding: 10px 0;
 }
 .new-products-content-item img {
    width:100%;
