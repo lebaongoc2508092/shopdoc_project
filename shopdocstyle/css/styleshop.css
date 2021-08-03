@@ -737,22 +737,13 @@ font-weight: 800;
     border: 1px solid transparent;
     border-radius: 10px;
     outline: none;
-    margin-left: 1rem;
-    padding: 12px;
     cursor: pointer;
   }
   
   #cart:hover {
     border-color: #fff;
-  }
+  } 
 
-
-  .cart-header {
-    font-weight: bold;
-    font-size: 1.25em;
-    color: #333;
-  }
-  
   .cart-column {
     display: flex;
     align-items: center;
