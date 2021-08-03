@@ -93,6 +93,7 @@ function updatecart() {
       updatecart()
     })
   }
+
 // đổ sản phẩm từ cơ sở dữ liệu 
 const listProducts = [
   {
@@ -303,8 +304,8 @@ function renderHTML2(arr){
 <div class="qv row">
     <div class="buy-view">
     <a href="" class="buy  ">
-        <i class="buy-btn ti-shopping-cart"></i>Mua nhanh
-    </a>
+            <i class="buy-btn ti-shopping-cart"></i>Mua nhanh
+        </a>
 </div>
 <div class="buy-view">
     <a href="" class="view ">
