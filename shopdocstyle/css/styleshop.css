@@ -645,7 +645,7 @@ font-weight: 800;
   
   .modal-content {
     margin: 0 auto;
-    width: 35%;
+    width: 33%;
     height: 100%;
     position: fixed;
     top: 0;
@@ -793,14 +793,14 @@ font-weight: 800;
   }
   
   .btn-danger:hover {
-    background-color: #CC4C4C;
+    background-color: #ee9999;
   }
   
   .cart-quantity-input {
     height: 34px;
     width: 50px;
     border-radius: 5px;
-    border: 1px solid #56CCF2;
+    border: 1px solid #6b6b6b;
     background-color: #eee;
     color: #333;
     padding: 0;
