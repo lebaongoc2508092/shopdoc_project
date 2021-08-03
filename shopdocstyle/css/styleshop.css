@@ -645,16 +645,17 @@ font-weight: 800;
   
   .modal-content {
     margin: 0 auto;
-    width: 50%;
-    position: relative;
-    display: flex;
+    width: 35%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
     flex-direction: column;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: .3rem;
     outline: 0;
-  
   }
   
   .modal-body {
@@ -820,6 +821,7 @@ font-weight: 800;
     text-align: end;
     margin-top: 10px;
     margin-right: 10px;
+    height: 40px;
   }
   
   .cart-total-title {
