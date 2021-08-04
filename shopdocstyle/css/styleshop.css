@@ -628,7 +628,7 @@ font-weight: 800;
     max-width: 100%;
 }
 
-
+/* modal cua đức  */
 .modal {
     display: none;
     position: fixed;
@@ -835,6 +835,96 @@ font-weight: 800;
     color: #333;
     font-size: 1.1em;
   }
+
+  /* hết modal của đức  */
+  /* section đăng nhập  */
+  section.container-sing-in{
+      margin-top: 150px;
+      margin-bottom: 40px;
+      
+  }
+  .user-title{
+      flex: 1;
+      border-right: 1px solid #f3f3f3;
+    display: flex;
+  }
+  .user-title-content {
+      margin: auto;
+      font-family:'Quicksand', sans-serif; ;
+      font-size: 3.857rem;
+      font-weight: bold;
+    
+  }
+  .user-form{
+      flex: 1;
+  }
+  .user-form-sing-in {
+    display: block;
+    text-align: center;
+  }
+  .form-control {
+    width: 70%;
+    padding: 10px 0;
+    margin: 6px 0;
+  }
+  .form-control {
+
+  }
+input#username {
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input#password {
+    padding: 10px 12px; 
+    border-radius: 5px;
+    border: 1px solid #f3f3f3;
+}
+.user-form-control {
+    display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.user-form-control{
+    margin-top: 12px;
+    position: relative;
+}
+.user-form-control-left {
+    padding: 0 12px;
+    position:absolute;
+    left: 104px;
+    top :0;
+    font-size: 16px; 
+    /* border: 1px solid #f3f3f3;
+    background-color: #ccc; */
+}
+button.btn:hover{
+    background-color: #fff;
+    color: #000;
+    transition: 0.5s;
+}
+
+button.btn {
+    padding: 12px 30px;
+    background-color: #ccc;
+    color: #fff;
+    border: 1px solid #ccc;
+}
+.user-form-control-right {
+    position:absolute;
+    left: 300px;
+    font-size: 16px;
+}
+.user-form-control-right a{
+    text-decoration: none;
+    color: #000;
+}
+.user-form-control-right i {
+    opacity: 0.6;
+}
+
+
+
 
 
 
