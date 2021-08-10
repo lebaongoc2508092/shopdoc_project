@@ -943,7 +943,7 @@ input#name {
     outline: none;
 }
 
-<<<<<<< HEAD
+
 /* modal search  */
 .modal-search {
   position: fixed;
@@ -1006,7 +1006,7 @@ input#name {
         opacity: 1;
         transform: translateX(0);
     }
-=======
+
 .buy{
     color: #ffffff;
     background-color: black;

@@ -268,10 +268,9 @@ function changeProducts(id) {
   localStorage.removeItem('listBestSale')
   window.location.href = "./products.html";
 }
-<<<<<<< HEAD
-// them moi sản phẩm 
-=======
->>>>>>> 0194d94c026b4d6cf4f17f465b3a42d6d52c0550
+
+
+
 
 // cơ sở dữ liệu sản phẩm bán chạy
 const listBestSale = [
@@ -391,6 +390,7 @@ function bestProduct(id) {
 }
 // bật mở modal search 
  const iconSearch = document.querySelector('#js-search')
+ console.log(iconSearch)
  const modalSearch = document.querySelector('.js-modal-search')
  const modalClose = document.querySelector('#js-modal-search-icon')
 
