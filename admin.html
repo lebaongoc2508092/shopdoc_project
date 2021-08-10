@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td{
+            border: 1px solid #000;
+            border-collapse: collapse;
+            margin-top: 50px;
+        }
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-title">
+        <h1>Trang ADMIN</h1>
+    </div> 
+    <div class="control">
+        <input type="text" placeholder="Tên sản phẩm">
+        <input type="text" placeholder="ảnh sản phẩm">
+        <input type="number" placeholder="giá sản phẩm">
+        <button id="btn">Add</button>
+        <button id="btn-edit">Cập nhật</button>
+    </div>
+    <h2>Danh sách sản phẩm</h2>
+    <div>
+        <table id="list-sanpham">
+            <tr>
+                <td>ID</td>
+                <td>Tên sản phẩm</td>
+                <td>Ảnh sản phẩm</td>
+                <td>Giá sản phẩm</td>
+                <td>Action</td>
+            </tr>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    
+
+
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

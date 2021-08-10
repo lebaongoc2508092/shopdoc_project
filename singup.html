@@ -20,7 +20,7 @@
         <!-- body header -->
         <div id="header-body">
         <div class="logo-header">
-        <img src="./shopdocstyle/img/logo2.jpg" alt="logo" class="logo">
+         <img src="./shopdocstyle/img/logo2.jpg" alt="logo" class="logo">
         </div>
         <!-- menu -->
         <ul id="nav">
@@ -75,17 +75,95 @@
         </ul>
          <!-- control  -->
          <div class="icon-btn search-btn">
-           <a href="./singin.html"><i class="icon-btn ti-user"></i></a> 
-            <i id="js-search" class="icon-btn ti-search"></i>
-            <i class="icon-btn ti-bag"></i>
+            <i class="icon-btn ti-user"></i>
+            <i class="icon-btn ti-search"></i>
+            <button id="cart"><i class="icon-btn ti-bag" aria-hidden="true"></i></button>
         </div>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Giỏ Hàng</h5>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                        <span class="cart-price cart-header cart-column">Giá</span>
+                        <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                    </div>
+                    <div class="cart-items">
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="./shopdocstyle/img/sanphammoi/sp1.jpg" width="100" height="100">
+                                <span class="cart-item-title">AP1010 Áo Phông 28/621</span>
+                            </div>
+                            <span class="cart-price cart-column">265000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="1">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div>
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="./shopdocstyle/img/sanphammoi/sp2.jpg" width="100" height="100">
+                                <span class="cart-item-title">AP6816 Áo Phông 28/621</span>
+                            </div>
+                            <span class="cart-price cart-column">265000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="2">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                    </div>
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Tổng Cộng:</strong>
+                        <span class="cart-total-price">795000VNĐ</span>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                    <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- product  -->
-    <section class="product">
-        
-    </section>
-    <!-- footer  -->
+    </div>
+    <!-- phần đăng ký  -->
+    <section class="container-sing-in row">
+        <div class="user-title">
+            <div class="user-title-content">Tạo tài khoản</div>
+        </div>
+        <div class="user-form">
+            <form action="" method="post" id="form-Singin" class="user-form-sing-in">
+                <div class="form-group">
+                    <input type="text" placeholder="Họ tên của bạn*" class="form-control" id="name" >
+                    </div>
+                <div class="form-group">
+                <input type="email" placeholder="Email*" class="form-control" id="username" data-validation-error-msg="Email sai định dạng">
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Số điện thoại*" class="form-control" id="sdt" >
+                    </div>
+                <div class="form-group">
+                <input type="password" placeholder="Mật khẩu*" class="form-control" id="password" required data-validation="required">
+                </div>
+            </form>
+            <div class="user-form-control">
+                <div class="user-form-control-left">
+                <button id="button-btn" type="submit" class="btn">Đăng ký</button>
+                </div>
+                <div class="user-form-control-right">
+                <a href="">Quên mật khẩu ?</a><br> <i>hoặc</i>
+                <a href="./singin.html">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+
+     <!-- footer  -->
 <footer class="section-footer">
     <div class="footer-subscribe row">
        <div class="col-12">
@@ -150,6 +228,6 @@
     </div>
 </footer>
  </div> 
- <script src="product.js"></script>
+ <script src="singup.js"></script>
 </body>
 </html>

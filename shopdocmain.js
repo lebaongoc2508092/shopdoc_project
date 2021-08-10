@@ -171,8 +171,9 @@ price:265000,
 },
 ];
 
-
-localStorage.setItem('listProducts',JSON.stringify(listProducts));
+if(!localStorage.getItem('listProducts')){
+  localStorage.setItem('listProducts',JSON.stringify(listProducts));
+}
 let data = JSON.parse(localStorage.getItem("listProducts"));
 function start() {
   renderHTML(data);
@@ -210,6 +211,8 @@ function changeProducts(id) {
   localStorage.removeItem('listBestSale')
   window.location.href = "./products.html";
 }
+// them moi sản phẩm 
+
 // cơ sở dữ liệu sản phẩm bán chạy
 const listBestSale = [
   {
@@ -326,3 +329,29 @@ function bestProduct(id) {
   localStorage.removeItem('listProducts')
   window.location.href = "./products.html";
 }
+// bật mở modal search 
+ const iconSearch = document.querySelector('#js-search')
+ const modalSearch = document.querySelector('.js-modal-search')
+ const modalClose = document.querySelector('#js-modal-search-icon')
+
+ function showModalSearch() {
+  modalSearch.classList.add('open')
+ }
+
+ function hideModalSearch() {
+  modalSearch.classList.remove('open')
+ }
+
+ iconSearch.addEventListener('click', showModalSearch );
+
+
+ modalClose.addEventListener('click', hideModalSearch);
+//  tìm kiếm sản phẩm ////
+// function timkiem(){
+//   var storageKey = 'listProducts'
+//   var todoList = JSON.parse(localStorage.getItem(storageKey))
+//   var giatritim = document.getElementById('giatritim').value
+//   var ketqua = todoList.indexOf(giatritim,0)
+//   alert(ketqua)
+
+// }

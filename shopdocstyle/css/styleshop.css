@@ -111,10 +111,14 @@ list-style-type: none;
     background-color:#fff;
     
 }
+a#check {
+    text-decoration: none;
+}
 .icon-btn {
     padding: 9px 9px;
     width: 15%;
     cursor: pointer;
+   
 }
 
 #nav .nav-arrow-down{
@@ -850,7 +854,7 @@ font-weight: 800;
   }
   .user-title-content {
       margin: auto;
-      font-family:'Quicksand', sans-serif; ;
+      font-family:'Quicksand', sans-serif; 
       font-size: 3.857rem;
       font-weight: bold;
     
@@ -874,11 +878,14 @@ input#username {
     padding: 10px 12px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    outline: none;
 }
 input#password {
     padding: 10px 12px; 
     border-radius: 5px;
-    border: 1px solid #f3f3f3;
+    border: 1px solid #ccc;
+    outline: none;
+
 }
 .user-form-control {
     display: flex;
@@ -892,23 +899,28 @@ input#password {
 .user-form-control-left {
     padding: 0 12px;
     position:absolute;
-    left: 104px;
+    left: 114px;
     top :0;
     font-size: 16px; 
-    /* border: 1px solid #f3f3f3;
-    background-color: #ccc; */
+    border: 1px solid #f3f3f3;
+    background-color: #ccc;
 }
-button.btn:hover{
+.user-form-control-left:hover   {
     background-color: #fff;
     color: #000;
     transition: 0.5s;
+    border: 1px solid #000;
+}
+button.btn:hover{
+    color: #000;
 }
 
 button.btn {
     padding: 12px 30px;
-    background-color: #ccc;
     color: #fff;
-    border: 1px solid #ccc;
+    background-color: transparent;
+    border: none;
+    
 }
 .user-form-control-right {
     position:absolute;
@@ -922,9 +934,78 @@ button.btn {
 .user-form-control-right i {
     opacity: 0.6;
 }
+/* section đăng ký tài khoản  */
+input#sdt,
+input#name {
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
 
-
-
+/* modal search  */
+.modal-search {
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: flex-end;
+    z-index: 1;
+    animation: modalFacein ease-in 0.5s;
+}
+.modal-search.open {
+    display: flex;
+   
+} 
+.modal-search-container {
+    background-color:#fff;
+    width: 500px;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+  
+}
+.modal-search-header {
+    width: 80%;
+    padding: 60px 70px;
+    position: relative;
+    font-size: 18px;
+    font-family:'Quicksand', sans-serif; 
+   
+}
+.modal-search-icon {
+    position:absolute;
+    right: 0;
+}
+.modal-search-input {
+    border: unset;
+}
+.modal-input {
+    padding: 16px;
+    width: 75%;
+    left: 50px;
+    margin-left: 50px;
+    margin-right: 70px;
+    color:#000;
+    font-family:'Quicksand', sans-serif ;
+    background-color: #ccc;
+   border: unset;
+}
+@keyframes modalFacein {
+    from{
+        opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 
 
