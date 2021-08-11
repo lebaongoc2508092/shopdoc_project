@@ -7,8 +7,6 @@ if(data){
 }
 let id2 = localStorage.getItem("id2");
 let data2 = JSON.parse(localStorage.getItem("listBestSale"));
-console.log(data2)
-
 if(data2){
     var index2 = data2.findIndex((item) => {
         return item.id == id2;
@@ -62,7 +60,7 @@ if(data2){
                 <input type="number"min="0" value="1">
             </div>
                 <div class="product-content-right-product-button">
-                    <button><i class="ti-shopping-cart"></i><p>Đặt hàng</p></button>
+                    <button id="dat-hang"><i class="ti-shopping-cart"></i><p>Đặt hàng</p></button>
                     <button><i class="ti-home"></i><p>Chi nhánh còn</p></button>
                 </div>
                 <div class="description-content">
@@ -174,5 +172,8 @@ if(data2){
     </div>`;
 
 
-// sản phẩm bán chạy 
+// gio hang 
+
+
+
 

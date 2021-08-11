@@ -245,12 +245,12 @@ function renderHTML(arr) {
     <p class="price">${item.price}<sup>đ</sup></p></div>
     <div class="qv row">
         <div class="buy-view">
-        <button type="button" class="buy">
+        <a href="#" class="buy">
             <i class="buy-btn ti-shopping-cart"></i>Mua nhanh
-        </button>
+        </a>
     </div>
     <div class="buy-view">
-        <a href="" class="view ">
+        <a href="#" class="view ">
             <i class="view-btn ti-eye"></i>Xem chi tiết
         </a>
     </div>
@@ -365,12 +365,12 @@ function renderHTML2(arr){
     </div>
 <div class="qv row">
     <div class="buy-view">
-    <button type="button" class="buy">
+    <a href="#"  class="buy">
             <i class="buy-btn ti-shopping-cart"></i>Mua nhanh
-        </button>
+        </a>
 </div>
 <div class="buy-view">
-    <a href="" class="view ">
+    <a href="#" class="view ">
         <i class="view-btn ti-eye"></i>Xem chi tiết
     </a>
 </div>
@@ -390,7 +390,6 @@ function bestProduct(id) {
 }
 // bật mở modal search 
  const iconSearch = document.querySelector('#js-search')
- console.log(iconSearch)
  const modalSearch = document.querySelector('.js-modal-search')
  const modalClose = document.querySelector('#js-modal-search-icon')
 

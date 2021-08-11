@@ -1,6 +1,5 @@
 var storageKey = 'listProducts'
 var todoList = JSON.parse(localStorage.getItem(storageKey))
-console.log(todoList)
 var btnAdd = document.getElementById('btn')
     btnAdd.addEventListener('click',addItem)
     function addItem() {
