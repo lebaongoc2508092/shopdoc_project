@@ -56,99 +56,99 @@ window.onclick = function (event) {
   }
 }
 
-var remove_cart = document.getElementsByClassName("btn-danger");
-for (var i = 0; i < remove_cart.length; i++) {
-  var button = remove_cart[i]
-  button.addEventListener("click", function () {
-    var button_remove = event.target
-    button_remove.parentElement.parentElement.remove()
+// var remove_cart = document.getElementsByClassName("btn-danger");
+// for (var i = 0; i < remove_cart.length; i++) {
+//   var button = remove_cart[i]
+//   button.addEventListener("click", function () {
+//     var button_remove = event.target
+//     button_remove.parentElement.parentElement.remove()
 
-    updatecart()
-  })
-}
+//     updatecart()
+//   })
+// }
 
-function updatecart() {
-    var cart_item = document.getElementsByClassName("cart-items")[0];
-    var cart_rows = cart_item.getElementsByClassName("cart-row");
-    var total = 0;
-    for (var i = 0; i < cart_rows.length; i++) {
-      var cart_row = cart_rows[i]
-      var price_item = cart_row.getElementsByClassName("cart-price ")[0]
-      var quantity_item = cart_row.getElementsByClassName("cart-quantity-input")[0]
-      var price = parseFloat(price_item.innerText)
-      var quantity = quantity_item.value
-      total = total + (price * quantity)
-    }
-    document.getElementsByClassName("cart-total-price")[0].innerText = total + 'VNĐ'
-  }
+// function updatecart() {
+//     var cart_item = document.getElementsByClassName("cart-items")[0];
+//     var cart_rows = cart_item.getElementsByClassName("cart-row");
+//     var total = 0;
+//     for (var i = 0; i < cart_rows.length; i++) {
+//       var cart_row = cart_rows[i]
+//       var price_item = cart_row.getElementsByClassName("cart-price")[0]
+//       var quantity_item = cart_row.getElementsByClassName("cart-quantity-input")[0]
+//       var price = parseFloat(price_item.innerText)
+//       var quantity = quantity_item.value
+//       total = total + (price * quantity)
+//     }
+//     document.getElementsByClassName("cart-total-price")[0].innerText = total + 'VNĐ'
+//   }
 
-  var quantity_input = document.getElementsByClassName("cart-quantity-input");
-  for (var i = 0; i < quantity_input.length; i++) {
-    var input = quantity_input[i];
-    input.addEventListener("change", function (event) {
-      var input = event.target
-      if (isNaN(input.value) || input.value <= 0) {
-        input.value = 1;
-      }
-      updatecart()
-    })
-  }
+  // var quantity_input = document.getElementsByClassName("cart-quantity-input");
+  // for (var i = 0; i < quantity_input.length; i++) {
+  //   var input = quantity_input[i];
+  //   input.addEventListener("change", function (event) {
+  //     var input = event.target
+  //     if (isNaN(input.value) || input.value <= 0) {
+  //       input.value = 1;
+  //     }
+  //     updatecart()
+  //   })
+  // }
 
   
-var add_cart = document.getElementsByClassName("buy");
-for (var i = 0; i < add_cart.length; i++) {
-  var add = add_cart[i];
-  add.addEventListener("click", function (event) {
+// var add_cart = document.getElementsByClassName("buy");
+// for (var i = 0; i < add_cart.length; i++) {
+//   var add = add_cart[i];
+//   add.addEventListener("click", function (event) {
 
-    var button = event.target;
-    var product = button.parentElement.parentElement;
-    var img = product.parentElement.getElementsByClassName("imgPr")[0].src
-    var title = product.getElementsByClassName("title")[0].innerText
-    var price = product.getElementsByClassName("price")[0].innerText
-    addItemToCart(title, price, img)
-    modal.style.display = "block";
+//     var button = event.target;
+//     var product = button.parentElement.parentElement;
+//     var img = product.parentElement.getElementsByClassName("imgPr")[0].src
+//     var title = product.getElementsByClassName("title")[0].innerText
+//     var price = product.getElementsByClassName("price")[0].innerText
+//     addItemToCart(title, price, img)
+//     modal.style.display = "block";
     
-    updatecart()
-  })
-}
+//     updatecart()
+//   })
+// }
 
-function addItemToCart(title, price, img) {
-  var cartRow = document.createElement('div')
-  cartRow.classList.add('cart-row')
-  var cartItems = document.getElementsByClassName('cart-items')[0]
-  var cart_title = cartItems.getElementsByClassName('title')
-  for (var i = 0; i < cart_title.length; i++) {
-    if (cart_title[i].innerText == title) {
-      alert('Sản Phẩm Đã Có Trong Giỏ Hàng');
-      return;
-    }
-  }
+// function addItemToCart(title, price, img) {
+//   var cartRow = document.createElement('div')
+//   cartRow.classList.add('cart-row')
+//   var cartItems = document.getElementsByClassName('cart-items')[0]
+//   var cart_title = cartItems.getElementsByClassName('title')
+//   for (var i = 0; i < cart_title.length; i++) {
+//     if (cart_title[i].innerText == title) {
+//       alert('Sản Phẩm Đã Có Trong Giỏ Hàng');
+//       return;
+//     }
+//   }
 
-  var cartRowContents = `
-  <div class="cart-item cart-column">
-      <img class="cart-item-image" src="${item.imgProduct}" width="100" height="100">
-      <span class="cart-item-title">${item.nameProduct}</span>
-  </div>
-  <span class="cart-price cart-column">${item.price}</span>
-  <div class="cart-quantity cart-column">
-      <input class="cart-quantity-input" type="number" value="1">
-      <button class="btn btn-danger" type="button">Xóa</button>
-  </div>`
-  cartRow.innerHTML = cartRowContents
-  cartItems.append(cartRow)
-  cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', function () {
-    var button_remove = event.target
-    button_remove.parentElement.parentElement.remove()
-    updatecart()
-  })
-  cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', function (event) {
-    var input = event.target
-    if (isNaN(input.value) || input.value <= 0) {
-      input.value = 1;
-    }
-    updatecart()
-  })
-}
+//   var cartRowContents = `
+//   <div class="cart-item cart-column">
+//       <img class="cart-item-image" src="${item.imgProduct}" width="100" height="100">
+//       <span class="cart-item-title">${item.nameProduct}</span>
+//   </div>
+//   <span class="cart-price cart-column">${item.price}</span>
+//   <div class="cart-quantity cart-column">
+//       <input class="cart-quantity-input" type="number" value="1">
+//       <button class="btn btn-danger" type="button">Xóa</button>
+//   </div>`
+//   cartRow.innerHTML = cartRowContents
+//   cartItems.append(cartRow)
+//   cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', function () {
+//     var button_remove = event.target
+//     button_remove.parentElement.parentElement.remove()
+//     updatecart()
+//   })
+//   cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', function (event) {
+//     var input = event.target
+//     if (isNaN(input.value) || input.value <= 0) {
+//       input.value = 1;
+//     }
+//     updatecart()
+//   })
+// }
 
 
 // đổ sản phẩm từ cơ sở dữ liệu 
@@ -231,6 +231,7 @@ price:265000,
 if(!localStorage.getItem('listProducts')){
   localStorage.setItem('listProducts',JSON.stringify(listProducts));
 }
+
 let data = JSON.parse(localStorage.getItem("listProducts"));
 function start() {
   renderHTML(data);
@@ -245,9 +246,9 @@ function renderHTML(arr) {
     <p class="price">${item.price}<sup>đ</sup></p></div>
     <div class="qv row">
         <div class="buy-view">
-        <a href="#" class="buy">
+        <button id="btn_buy" onclick="btn_buy(${item.id})" type="text" class="buy">
             <i class="buy-btn ti-shopping-cart"></i>Mua nhanh
-        </a>
+        </button>
     </div>
     <div class="buy-view">
         <a href="#" class="view ">
@@ -414,3 +415,76 @@ function bestProduct(id) {
 //   alert(ketqua)
 
 // }
+
+//
+function btn_buy(id){
+  var sanPham = data.find(function(item){
+    return item.id == id
+  })
+  gioHang.push(sanPham)
+  console.log(gioHang);
+  renderHtml3(gioHang);
+}
+
+let gioHang = []
+
+
+
+function renderHtml3(arr) {
+  let modal = document.querySelector("#cart-row2");
+  let strHTML3 = arr.map((gioHang) =>{
+    return(`
+    <div class="cart-item cart-column">
+      <img class="cart-item-image" src="${gioHang.imgProduct}" width="100" height="100">
+      <span class="cart-item-title">${gioHang.nameProduct}</span>
+  </div>
+  <span class="cart-price cart-column">${gioHang.price}</span>
+  <div class="cart-quantity cart-column">
+      <input class="cart-quantity-input" type="number" value="1">
+      <button class="btn btn-danger" type="button">Xóa</button>
+  </div>`);
+  }); 
+  
+  if (modal) {
+    modal.innerHTML = strHTML3.join("");
+  }
+
+
+var remove_cart = document.getElementsByClassName("btn-danger");
+for (var i = 0; i < remove_cart.length; i++) {
+  var button = remove_cart[i]
+  button.addEventListener("click", function () {
+    var button_remove = event.target
+    button_remove.parentElement.parentElement.remove()
+
+    updatecart()
+  })
+}
+
+function updatecart() {
+    var cart_item = document.getElementsByClassName("cart-items")[0];
+    var cart_rows = cart_item.getElementsByClassName("cart-row2");
+    var total = 0;
+    for (var i = 0; i < cart_rows.length; i++) {
+      var cart_row = cart_rows[i]
+      var price_item = cart_row.getElementsByClassName("cart-price ")[0]
+      var quantity_item = cart_row.getElementsByClassName("cart-quantity-input")[0]
+      var price = parseFloat(price_item.innerText)
+      var quantity = quantity_item.value
+      total = total + (price * quantity)
+    }
+    document.getElementsByClassName("cart-total-price")[0].innerText = total + 'VNĐ'
+  }
+
+  var quantity_input = document.getElementsByClassName("cart-quantity-input");
+  for (var i = 0; i < quantity_input.length; i++) {
+    var input = quantity_input[i];
+    input.addEventListener("change", function (event) {
+      var input = event.target
+      if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1;
+      }
+      updatecart()
+    })
+  }
+}

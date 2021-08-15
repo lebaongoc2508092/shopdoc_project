@@ -60,7 +60,7 @@ if(data2){
                 <input type="number"min="0" value="1">
             </div>
                 <div class="product-content-right-product-button">
-                    <button id="dat-hang"><i class="ti-shopping-cart"></i><p>Đặt hàng</p></button>
+                    <button id="btn_buy1"><i class="ti-shopping-cart"></i><p>Đặt hàng</p></button>
                     <button><i class="ti-home"></i><p>Chi nhánh còn</p></button>
                 </div>
                 <div class="description-content">
@@ -173,6 +173,7 @@ if(data2){
 
 
 // gio hang 
+
 
 
 
