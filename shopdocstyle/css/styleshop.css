@@ -870,10 +870,16 @@ font-weight: 800;
     width: 70%;
     padding: 10px 0;
     margin: 6px 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
   }
-  .form-control {
-
-  }
+ input.form-control--pd {
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+ }
 input#username {
     padding: 10px 12px;
     border-radius: 5px;
@@ -997,6 +1003,88 @@ input#name {
     background-color: #ccc;
    border: unset;
 }
+/* log out  */
+.header__navbar-item {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+    display: inline-block;
+}
+#navbar-user {
+    display: none;
+}
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
+
+.header__navbar-user-menu {
+    position: absolute;
+    top: calc(100% + 9px);
+    right: -29px;
+    list-style: none;
+    min-width: 150px;
+    padding-left: 0;
+    background-color:rgb(243, 241, 241);
+    font-size: 14px;
+    box-shadow: 0 1px 2px #e0e0e0;
+    border-radius: 2px;
+    display: none;
+}
+.header__navbar-user-menu::before {
+    content: "";
+    border-width: 16px 20px;
+    border-style: solid;
+    border-color: transparent transparent rgb(243, 241, 241) transparent;
+    position: absolute;
+    z-index: -1;
+    right: 16px;
+    top: -28px;
+}
+
+.header__navbar-user-menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -12px;
+    right: 0;
+    width: 100px;
+    height: 14px;
+}
+
+.header__navbar-user-item a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+    padding: 6px 8px;
+    display: block;
+}
+
+.header__navbar-user-item a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.header__navbar-user-item a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-user-item a:hover {
+    background-color: #fafafa;
+}
+.header__navbar-user-item--separate {
+    display: flex;
+    padding: 0 8px;
+}
+
+.header__navbar-user-item--icon {
+    display: block;
+    margin-top: 7px;
+    margin-right: 2px;
+    border-bottom: 1px solid #ddd;
+
+}
+
+
 @keyframes modalFacein {
     from{
         opacity: 0;
@@ -1006,15 +1094,15 @@ input#name {
         opacity: 1;
         transform: translateX(0);
     }
+}
 
-.buy{
+/* .buy {
     color: #ffffff;
     background-color: black;
     border:1px solid black;
     padding: 0;
 >>>>>>> 0194d94c026b4d6cf4f17f465b3a42d6d52c0550
-}
-
+} */
 
 
 

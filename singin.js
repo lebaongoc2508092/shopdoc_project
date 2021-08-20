@@ -1,8 +1,7 @@
 ///js phần đăng nhập 
-let user = JSON.parse(localStorage.getItem('user'));
+let user = JSON.parse(localStorage.getItem('userName'));
 console.log(user)
-var email = 'lebaongoc@gmail.com';
-var pass = '123';
+
 var btn = document.getElementById('button-btn')
 btn.onclick = function(){
     var inputUsername = document.getElementById('username').value;
@@ -10,7 +9,7 @@ btn.onclick = function(){
     let check = user.find(function(item){
       return item.username == inputUsername && item.password == inputPassword
     });
-    
+      
     if(check) {
                 window.location = './index.html';
                  localStorage.setItem('check',JSON.stringify(check))

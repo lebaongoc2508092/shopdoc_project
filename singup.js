@@ -1,3 +1,42 @@
+let keyUser = 'user'
+let userName = JSON.parse(localStorage.getItem(keyUser))
+console.log(userName)
+var btn = document.getElementById('button-btn')
+btn.addEventListener('click',addUser)
+function addUser (){
+var ip = document.querySelectorAll('#ip')
+let newUser = {
+    id: userName.length + 1,
+    username:ip[0].value,
+    email:ip[1].value,
+    phone:ip[2].value,
+    password:ip[3].value,
+}
+var check = userName.findIndex(function(user){
+    return user.username == ip[0].value;
+});
+console.log(check)
+if(check !== -1){
+    alert('tài khoản đã tồn tại vui lòng nhập lại')
+    
+}
+else{
+    userName.push(newUser)
+    console.log(userName)
+    alert('bạn đã đăng kí thành công')
+}
+localStorage.setItem('userName',JSON.stringify(userName))
+    
+}
+
+ 
+     
+    
+
+
+
+
+
 let user = [
     {
         id:1,
@@ -19,11 +58,9 @@ let user = [
         username:'lebaongoc4',
         password:12347,
     },
+];
 
-
-]
-   
-    if(!localStorage.getItem('user')){
-        localStorage.setItem('user',JSON.stringify(user));
-    }
+ if(!localStorage.getItem('user')){
+     localStorage.setItem('user',JSON.stringify(user))
+ };
 

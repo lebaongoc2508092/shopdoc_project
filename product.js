@@ -3,7 +3,9 @@ let data = JSON.parse(localStorage.getItem("listProducts"));
 if(data){
     var index = data.findIndex((item) => {
         return item.id == id;
+
       });
+      console.log(data);
 }
 let id2 = localStorage.getItem("id2");
 let data2 = JSON.parse(localStorage.getItem("listBestSale"));
@@ -33,7 +35,10 @@ if(data2){
                 <span class="mst"><strong>Mã sản phẩm:</strong> AP3310 Áo thun 18/321</span>
             </div>
             <div class="product-content-right-product-price">
-                <p>${data?[index].price:data2[index2].price}<sup>đ</sup></p>
+            <p>${new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(data?data[index].price:data2[index2].price)}
+           </p>
+          
+            
             </div>
             <div class="product-content-right-product-color row ">
                 <p>Màu sắc:</p> 

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./shopdocstyle/css/styleshop.css">
     <link rel="stylesheet" href="./shopdocstyle/font/themify-icons/themify-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div id="main">
@@ -24,13 +25,13 @@
         </div>
         <!-- menu -->
         <ul id="nav">
-            <li><a href="./index.html">Trang chủ</a></li>
+            <li><a href="">Trang chủ</a></li>
             <li  ><a href="">
                 Super sale tháng 7
                 <i class="nav-arrow-down ti-angle-down"></i>    
             </a>
             <ul class="subnav">
-                <li><a href="">Áo phông 39k</a></li>
+                <li><a href="#aosale">Áo phông 39k</a></li>
                 <li><a href="">Áo phông 99k</a></li>
             </ul>
         </li>
@@ -39,7 +40,7 @@
                 <i class="nav-arrow-down ti-angle-down"></i>
             </a>
             <ul class="subnav">
-                <li><a href="">Áo Thun Tay Ngắn</a></li>
+                <li><a href="#aongantay">Áo Thun Tay Ngắn</a></li>
                 <li><a href="">Áo Polo</a></li>
                 <li><a href="">Áo Tank Top</a></li>
                 <li><a href="">Áo Sơ Mi Dài Tay</a></li>
@@ -74,10 +75,13 @@
             <li><a href="">Kiến thức</a></li>
         </ul>
          <!-- control  -->
-         <div class="icon-btn search-btn">
-            <i class="icon-btn ti-user"></i>
-            <i class="icon-btn ti-search"></i>
+         <div class="icon-btn ">
+            <a href="./singin.html" id="check">
+                <i class="icon-btn ti-user"></i>
+            </a>
+            <i id="js-search" class="icon-btn ti-search "></i>
             <button id="cart"><i class="icon-btn ti-bag" aria-hidden="true"></i></button>
+            <i id="log-out" class="fa fa-sign-out" style="font-size:18px"></i>
         </div>
         </div>
         <div id="myModal" class="modal">
@@ -129,39 +133,59 @@
         </div>
     </div>
     </div>
-    <!-- phần đăng ký  -->
-    <section class="container-sing-in row">
-        <div class="user-title">
-            <div class="user-title-content">Tạo tài khoản</div>
-        </div>
-        <div class="user-form">
-            <form action="" method="post" id="form-Singin" class="user-form-sing-in">
-                <div class="form-group">
-                    <input type="text" placeholder="Họ tên của bạn*" class="form-control form-control--pd" id="ip" >
+    <div class="giohang">
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Giỏ Hàng</h5>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                        <span class="cart-price cart-header cart-column">Giá</span>
+                        <span class="cart-quantity cart-header cart-column">Số Lượng</span>
                     </div>
-                <div class="form-group">
-                <input type="email" placeholder="Email*" class="form-control form-control--pd" id="ip" data-validation-error-msg="Email sai định dạng">
-                </div>
-                <div class="form-group">
-                    <input type="number" placeholder="Số điện thoại*" class="form-control form-control--pd" id="ip" >
+                    <div class="cart-items">
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="./shopdocstyle/img/sanphammoi/sp1.jpg" width="100" height="100">
+                                <span class="cart-item-title">AP1010 Áo Phông 28/621</span>
+                            </div>
+                            <span class="cart-price cart-column">265000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="1">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div>
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="./shopdocstyle/img/sanphammoi/sp2.jpg" width="100" height="100">
+                                <span class="cart-item-title">AP6816 Áo Phông 28/621</span>
+                            </div>
+                            <span class="cart-price cart-column">265000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="2">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
                     </div>
-                <div class="form-group">
-                <input type="password" placeholder="Mật khẩu*" class="form-control form-control--pd" id="ip" required data-validation="required">
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Tổng Cộng:</strong>
+                        <span class="cart-total-price">795000VNĐ</span>
+                    </div>
                 </div>
-            </form>
-            <div class="user-form-control">
-                <div class="user-form-control-left">
-                <button id="button-btn" type="submit" class="btn">Đăng ký</button>
-                </div>
-                <div class="user-form-control-right">
-                <a href="">Quên mật khẩu ?</a><br> <i>hoặc</i>
-                <a href="./singin.html">Đăng nhập</a>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                    <button type="button" class="btn btn-primary order">Thanh Toán</button>
                 </div>
             </div>
         </div>
-        </section>
+    </div>
+        
+    </div>
 
-     <!-- footer  -->
+    <!-- footer  -->
 <footer class="section-footer">
     <div class="footer-subscribe row">
        <div class="col-12">
@@ -226,6 +250,20 @@
     </div>
 </footer>
  </div> 
- <script src="singup.js"></script>
+ <!-- modal search  -->
+ <div class="modal-search js-modal-search">
+     <div class="modal-search-container">
+         <div class="modal-search-header">
+            Tìm kiếm
+            <i id="js-modal-search-icon" class="ti-close modal-search-icon "></i>
+         </div>
+         <div class="modal-search-input"></div>
+         <input type="text" class="modal-input" id="giatritim" placeholder="Tìm kiếm sản phẩm...">
+        </div>
+     </div>
+
+ </div>
+ <script src="shopdocmain.js"></script>
+ <script src="dangnhap.js"></script>
 </body>
 </html>

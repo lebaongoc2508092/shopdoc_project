@@ -242,7 +242,8 @@ function renderHTML(arr) {
     <div onclick="changeProducts(${item.id})">
     <a href="../shopdocproject/products.html" class="imgPr"><img src="${item.imgProduct}" alt="AP1010 Áo Phông 28/621"></a>
     <h3 class="title">${item.nameProduct}</h3>
-    <p class="price">${item.price}<sup>đ</sup></p></div>
+    <p>${new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(item.price)} </p></div>
+    
     <div class="qv row">
         <div class="buy-view">
         <a href="#" class="buy">
@@ -361,7 +362,7 @@ function renderHTML2(arr){
     <div onclick="bestProduct(${item.id})">
     <img src="${item.img}" alt="AP3312 áo phông 12/621">
     <h3>${item.name}</h3>
-    <p>${item.price}<sup>đ</sup></p>
+    <p>${new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(item.price)}</p>
     </div>
 <div class="qv row">
     <div class="buy-view">
