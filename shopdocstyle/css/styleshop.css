@@ -227,6 +227,9 @@ a#check {
 .qv {
    margin-top: 10px;
    display: none;
+   margin-bottom: 6px;
+   width: 100%;
+  
 }
 .qv a {
     text-align: center;
@@ -240,6 +243,15 @@ a#check {
     margin: 0 3px;
     display: inline-block;
     padding: 10px 12px;
+    border-radius: 2px;
+}
+#btn_buy {
+    color: #fff;
+    background-color: #000;
+    border: none;
+    padding: 0 12px;
+    flex: 1;
+   
 }
 
 
@@ -920,13 +932,14 @@ input#password {
     top :0;
     font-size: 16px; 
     border: 1px solid #f3f3f3;
-    background-color: #ccc;
+    background-color: transparent;
+    border: none;
 }
 .user-form-control-left:hover   {
     background-color: #fff;
     color: #000;
     transition: 0.5s;
-    border: 1px solid #000;
+    border: none;
 }
 button.btn:hover{
     color: #000;
@@ -935,7 +948,7 @@ button.btn:hover{
 button.btn {
     padding: 12px 30px;
     color: #fff;
-    background-color: transparent;
+    background-color: #dddd;
     border: none;
     
 }

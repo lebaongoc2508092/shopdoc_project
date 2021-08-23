@@ -439,7 +439,7 @@ function renderHtml3(arr) {
       <img class="cart-item-image" src="${gioHang.imgProduct}" width="100" height="100">
       <span class="cart-item-title">${gioHang.nameProduct}</span>
   </div>
-  <span class="cart-price cart-column">${gioHang.price}</span>
+  <span class="cart-price cart-column">${new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(gioHang.price)}</span>
   <div class="cart-quantity cart-column">
       <input class="cart-quantity-input" type="number" value="1">
       <button class="btn btn-danger" type="button">Xóa</button>
@@ -474,7 +474,7 @@ function updatecart() {
       var quantity = quantity_item.value
       total = total + (price * quantity)
     }
-    document.getElementsByClassName("cart-total-price")[0].innerText = total + 'VNĐ'
+    document.getElementsByClassName("cart-total-price")[0].innerText = total + '.' + '000' + 'VNĐ'
   }
 
   var quantity_input = document.getElementsByClassName("cart-quantity-input");
